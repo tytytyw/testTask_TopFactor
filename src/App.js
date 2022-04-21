@@ -6,7 +6,6 @@ import { data } from './collections'
 
 const App = () => {
   const [state, setState] = useState(data[0])
-
   const changeDateHandler = (increaseValue) => {
     let newId = state.id + increaseValue
     if (newId < 0) newId = data.length - 1
@@ -17,7 +16,7 @@ const App = () => {
   return (
     <div className={styles.wrapper}>
       <Header date={state.date} changeDateHandler={changeDateHandler} />
-      <Cabinet />
+      <Cabinet performanceValues={state.performanceValues ?? []} />
     </div>
   )
 }
