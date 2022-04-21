@@ -5,7 +5,7 @@
         transform: translateY(0)
 @keyframes openToLeft
     0%
-        transform: translateX(100%)
+        transform: translateX(-100%)
     100%
         transform: translateX(0)
 .wrapper
@@ -22,6 +22,8 @@
     background: #F7F9FB
     padding: 20% 0
     animation: openToDown 1s ease
+    overflow: hidden
+
     &.person
         animation: openToLeft 1s ease
     .menuItem
