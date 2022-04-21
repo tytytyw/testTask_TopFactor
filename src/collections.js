@@ -13,3 +13,18 @@ export const data = [
     { id: 11, date: { month: 'Март', year: 2022 } },
     { id: 12, date: { month: 'Апрель', year: 2022 } },
 ]
+
+export const menuItems = {
+    menu: [
+        { text: 'Меню один', callback: (e) => { console.log(`клик на ${e}`) } },
+        { text: 'Меню два', callback: (e) => { console.log(`клик на ${e}`) } },
+        { text: 'Меню три', callback: (e) => { console.log(`клик на ${e}`) } },
+        { text: 'Меню четыре', callback: (e) => { console.log(`клик на ${e}`) } },
+        { text: 'Меню пять', callback: (e) => { console.log(`клик на ${e}`) } },
+    ],
+    person: [
+        { text: 'Персонализация один', callback: (e) => { console.log(`клик на ${e}`) } },
+        { text: 'Персонализация два', callback: (e) => { console.log(`клик на ${e}`) } },
+        { text: 'Персонализация три', callback: (e) => { console.log(`клик на ${e}`) } },
+    ],
+}
