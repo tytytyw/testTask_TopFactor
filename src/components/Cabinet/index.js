@@ -3,8 +3,10 @@ import styles from './Cabinet.module.sass'
 import UserInfo from './UserInfo'
 import PropTypes from "prop-types";
 import classNames from 'classnames';
+import WorkProgress from './WorkProgress'
 
-const Cabinet = ({ performanceValues }) => {
+const Cabinet = ({ data }) => {
+    const performanceValues = data.performanceValues
     const calcBonus = (performance) => performance.baseRate * performanceValues.find(item => item.name === 'result').value / 100
     const renderPerformanceValue = (performance) =>
         performance.name === 'bonus'
@@ -33,7 +35,7 @@ const Cabinet = ({ performanceValues }) => {
             <main className={styles.main}>
                 <div className={styles.performanceValues}>{renderPerformanceValues()}</div>
             </main>
-            <footer style={{ flexGrow: 1 }}></footer>
+            <WorkProgress date={data.date} workHours={data.workHours} />
         </div>
     )
 }
@@ -41,5 +43,5 @@ const Cabinet = ({ performanceValues }) => {
 export default Cabinet
 
 Cabinet.propTypes = {
-    performanceValues: PropTypes.array.isRequired
+    data: PropTypes.object.isRequired,
 }
