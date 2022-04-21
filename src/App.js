@@ -1,9 +1,13 @@
 import React from "react";
+import styles from './App.module.sass'
+import Header from './components/Header'
 
 const App = () => {
 
   return (
-    <div></div>
+    <div className={styles.wrapper}>
+      <Header />
+    </div>
   )
 }
 

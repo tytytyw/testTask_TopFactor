@@ -1,0 +1,38 @@
+.wrapper
+    height: 31px
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    padding: 0 10px
+    .date
+        display: flex
+        align-items: center
+        .text
+            margin: 0 5px
+        .changeDateButton
+            path
+                transition: fill .2s ease
+            &.next
+                transform: rotate(180deg)
+            &:hover
+                path
+                    fill: #0AA9FF
+            &:active
+                path
+                    fill: #001053
+    .menusWrapper
+        display: flex
+        align-items: center
+        .button
+            display: flex
+            align-items: center
+            path
+                transition: fill .2s ease
+            &.menu
+                margin-right: 20px
+            &:hover
+                path
+                    fill: #0AA9FF
+            &:active
+                path
+                    fill: #001053
