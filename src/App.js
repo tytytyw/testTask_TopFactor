@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from './App.module.sass'
 import Header from './components/Header'
+import Cabinet from './components/Cabinet'
 import { data } from './collections'
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <div className={styles.wrapper}>
       <Header date={state.date} changeDateHandler={changeDateHandler} />
+      <Cabinet />
     </div>
   )
 }
