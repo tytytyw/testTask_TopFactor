@@ -9,6 +9,8 @@
         align-items: center
         .text
             margin: 0 5px
+            min-width: 8em
+            text-align: center
         .changeDateButton
             path
                 transition: fill .2s ease
@@ -27,11 +29,14 @@
             display: flex
             align-items: center
             z-index: 3
+            transition: transform .2s ease
             path
                 transition: fill .2s ease
             &.menu
                 margin-right: 20px
-            &:hover
+                &.active
+                    transform: scale(-1)
+            &:hover,&.active
                 path
                     fill: #0AA9FF
             &:active

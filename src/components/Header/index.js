@@ -26,15 +26,29 @@ const Header = ({ date, changeDateHandler }) => {
                 </button>
             </div>
             <div className={styles.menusWrapper}>
-                <button className={classNames(styles.menu, styles.button)} onClick={() => onMenuHandler('menu')}>
+                <button
+                    className={classNames({
+                        [styles.menu]: true,
+                        [styles.button]: true,
+                        [styles.active]: showMenu?.name === 'menu'
+                    })}
+                    onClick={() => onMenuHandler('menu')}
+                >
                     <DoubleDownArrowIcon />
                 </button>
-                <button className={classNames(styles.PersonSettings, styles.button)} onClick={() => onMenuHandler('person')}>
+                <button
+                    className={classNames({
+                        [styles.PersonSettings]: true,
+                        [styles.button]: true,
+                        [styles.active]: showMenu?.name === 'person'
+                    })}
+                    onClick={() => onMenuHandler('person')}
+                >
                     <PersonIcon />
                 </button>
             </div>
             {showMenu?.name && <Menu menuItems={showMenu?.menuItems} menuName={showMenu?.name} />}
-        </div>
+        </div >
     )
 }
 
