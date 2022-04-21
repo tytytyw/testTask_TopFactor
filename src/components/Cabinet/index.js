@@ -4,6 +4,7 @@ import UserInfo from './UserInfo'
 import PropTypes from "prop-types";
 import classNames from 'classnames';
 import WorkProgress from './WorkProgress'
+import Navigation from './Navigation'
 
 const Cabinet = ({ data }) => {
     const performanceValues = data.performanceValues
@@ -34,6 +35,7 @@ const Cabinet = ({ data }) => {
             <UserInfo />
             <main className={styles.main}>
                 <div className={styles.performanceValues}>{renderPerformanceValues()}</div>
+                <Navigation />
             </main>
             <WorkProgress date={data.date} workHours={data.workHours} />
         </div>

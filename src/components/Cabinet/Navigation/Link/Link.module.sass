@@ -1,0 +1,30 @@
+.wrapper
+    background: #fff
+    border-radius: 8px
+    position: relative
+    text-decoration: none
+    border: 1px solid rgba(166, 188, 204, 0.5)
+    transition: background .2s ease
+    &:hover
+        background: #A6BCCC
+    &::before
+        content: ''
+        display: block
+        padding-top: 100%
+    .content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        text-decoration: none
+        .icon
+            margin-bottom: 5px
+            min-height: 40%
+        .text
+            color: #001053
+            font-size: 3vw
