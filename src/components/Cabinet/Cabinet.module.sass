@@ -13,7 +13,8 @@
             justify-content: space-between
             padding: 3em 0
             width: 100%
-            max-width: 600px
+            max-width: 70vmin
+            min-width: 230px
             margin: 0 auto
             .performance
                 flex-grow: 1
@@ -41,8 +42,15 @@
         .main
             .performanceValues
                 padding: 2em 0
+
 @media (min-width: 410px)
     .wrapper
         .main
             .performanceValues
                 padding: 1em 0
+
+@media (max-width: 410px)
+    .wrapper
+        .main
+            .performanceValues
+                max-width: 90%
